@@ -1,0 +1,12 @@
+# what is this
+enter in a linespace separated list of magic cards (make sure split cards are named like "far // away" (one space, two forward slashes, one space)).
+click search.
+wow a list of cards!
+
+# problems
+cards generated slowly
+interface ugly.
+
+# future work
+make faster
+prettify interface

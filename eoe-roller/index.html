@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" href="style.css">
+		<title>eoe-roller</title>
+	</head>
+	<body style="background: Pink">
+		<div style="background: LightPink;">
+			<h1> Edge of the Empire Dice Roller</h1>
+		</div>
+		<div style="background: LightPink;">
+			<h2> How-To: </h2>
+			<p> Click the dice you want to roll. Every time you click a die, you add one of that die to the dice pool. Once you've added enough (you can see what you've selected in the "TO ROLL" field), click "ROLL" to, well, roll your dice. You can see the raw face values of the dice in "RAW RESULT", and the net successes, advantages, and triumphs in "RESULT" (a negative value indicates failures, threats, or despairs). Triumphs and despairs have not been added to successes or failures, respectively.</p>
+			<p> You can click "RESET" to reset the dice pool to zero dice. You can click "SAVE" to save your dice pool for later use, and "LOAD" to load the saved dice and replace the current dice pool.</p>
+		</div>
+		<div style="background: LightPink; float: left; width: 260px;">
+			<h2> Log </h2>
+			<div id="log"></div>
+		</div>
+		<div style="background: LightPink; float: left;">
+			<h2> Let's Roll!</h2>
+			<br>
+			<div class="tooltip">
+				<a href=javascript:boost()><img src="dice/boost.png" alt="boost" class="dice"></img></a> 
+				<span class="tooltiptext">add boost dice</span>
+			</div>
+			<div class="tooltip">
+				<a href=javascript:ability()><img src="dice/ability.png" alt="ability" class="dice"></img></a> 
+				<span class="tooltiptext">add ability dice</span>
+			</div>
+			<div class="tooltip">
+				<a href=javascript:proficiency()><img src="dice/proficiency.png" alt="proficiency" class="dice"></img></a>
+				<span class="tooltiptext">add proficiency dice</span>
+			</div>
+			<br>
+			<div class="tooltip">
+				<a href=javascript:setback()><img src="dice/setback.png" alt="setback" class="dice"></img></a> 
+				<span class="tooltiptext">add setback dice</span>
+			</div>
+			<div class="tooltip">
+				<a href=javascript:difficulty()><img src="dice/difficulty.png" alt="difficulty" class="dice"></img></a>
+				<span class="tooltiptext">add difficulty dice</span>
+			</div>
+			<div class="tooltip">
+				<a href=javascript:challenge()><img src="dice/challenge.png" alt="challenge" class="dice"></img></a>
+				<span class="tooltiptext">add challenge dice</span>
+			</div>
+			<a href=javascript:reset()>RESET</a>
+			<br>
+			TO ROLL:&nbsp;<span id="display1"></span> <a href=javascript:roll()>ROLL</a>
+			<br>
+			RAW RESULT:&nbsp;<span id="display2"></span>
+			<br>
+			RESULT:&nbsp;<span id="display3"></span>
+			<br>
+			<a href=javascript:save()>save</a> <a href=javascript:load()>load</a>:&nbsp;<input type="text" value="attack roll"></input>&nbsp;<span id="display4"></span>
+		</div>
+	</body>
+	<script src="roller.js"></script>
+</html>

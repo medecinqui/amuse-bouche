@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css?family=Kosugi+Maru|Lato:900|VT323');
+
+body{
+	font-family: 'Kosugi Maro', sans-serif;
+}
+
+h1{
+	font-family: 'Lato', sans-serif;
+}
+
+#log{
+	font-family: 'VT232', monospace;
+}
+
+.dice{
+	height: 100px;
+	width: 100px;
+}
+
+.tooltip{
+	position: relative;
+	display: inline-block;
+//	border-bottom: 1px dotted black;
+}
+
+.tooltip .tooltiptext{
+//	visibility: hidden;
+	opacity: 0;
+	transition: opacity .5s;
+	
+	width: 120px;
+	background-color: black;
+	color: #fff;
+	text-align: center;
+	padding: 5px 0;
+	border-radius: 6px;
+	
+	position: absolute;
+	z-index: 1;
+	
+	width: 100px;
+	bottom: 100%;
+	left: 50%;
+	margin-left: -50px;
+}
+
+.tooltip:hover .tooltiptext{
+//	visibility: visible;
+	opacity: 1;
+}
+
+.tooltip .tooltiptext::after{
+	content: " ";
+    position: absolute;
+    top: 100%; /* At the bottom of the tooltip */
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: black transparent transparent transparent;
+}
